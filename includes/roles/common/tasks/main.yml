@@ -4,6 +4,7 @@
     upgrade: yes
     update_cache: yes
   become: true
+  when: upgrade_packages | bool == true
 
 - include_tasks: packages.yml
 

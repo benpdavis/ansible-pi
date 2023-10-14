@@ -1,2 +1,2 @@
 [pi]
-raspberrypi
+raspberrypi upgrade_packages=false

@@ -4,14 +4,12 @@
     name: tmux
   become: true
 
-- name: ensure Cockpit is at the latest version
+- name: install Cockpit
   apt:
     name: cockpit
-    state: latest
   become: true
 
-- name: ensure Lynis is at the latest version
+- name: install Lynis
   apt:
     name: lynis
-    state: latest
   become: true
