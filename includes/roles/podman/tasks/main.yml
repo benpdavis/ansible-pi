@@ -1,6 +1,0 @@
----
-- name: ensure Podman is at the latest version
-  apt:
-    name: podman
-  become: true
-

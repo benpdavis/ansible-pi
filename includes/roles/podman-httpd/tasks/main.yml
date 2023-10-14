@@ -1,0 +1,39 @@
+---
+- name: ensure Podman is at the latest version
+  apt:
+    name: podman
+  become: true
+  
+- name: add container registries
+  blockinfile:
+    path: /etc/containers/registries.conf
+    block: |
+      [registries.search]
+      registries = ['container-registry.oracle.com', 'quay.io', 'docker.io']
+  become: true
+
+- name: Pull an image
+  containers.podman.podman_image:
+    name: docker.io/library/httpd
+    
+- name: 
+  containers.podman.podman_volume:
+    name: httpd
+    state: present
+
+- name: copying file into home
+  copy:
+    src: files/index.html
+    dest: /home/pi/.local/share/containers/storage/volumes/httpd/_data/index.html
+    
+- name: create httpd container
+  containers.podman.podman_container:
+    name: pi
+    image: httpd
+    state: started
+    detach: true
+    exposed_ports:
+      - 80
+    ports:
+      - 8080:80
+    volumes: httpd:/usr/local/apache2/htdocs/
