@@ -1,0 +1,9 @@
+---
+- name: Raspberry Pi
+  hosts: pi
+  remote_user: pi
+  roles:
+    - common
+    - cockpit
+    - podman
+

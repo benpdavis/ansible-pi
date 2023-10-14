@@ -1,0 +1,1 @@
+bootfs/ - contents of this folder should be put in the root of the Raspberry Pi OS boot disk to enable SSH by default with user: pi and password: raspberry
