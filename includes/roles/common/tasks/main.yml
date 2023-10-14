@@ -6,5 +6,14 @@
   become: true
   when: upgrade_packages | bool == true
 
+- name: disable passwordless sudo for pi user
+  lineinfile:
+    path: /etc/sudoers.d/010_pi-nopasswd
+    state: present
+    regexp: '^pi\ ALL=\(ALL\)\ NOPASSWD\:\ ALL'
+    line: '#pi\ ALL=\(ALL\)\ NOPASSWD\:\ ALL'
+    validate: '/usr/sbin/visudo -cf %s'
+  become: true
+
 - include_tasks: packages.yml
 
