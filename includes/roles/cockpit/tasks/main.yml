@@ -1,6 +1,0 @@
----
-- name: ensure Cockpit is at the latest version
-  apt:
-    name: cockpit
-    state: latest
-  become: true

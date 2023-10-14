@@ -1,12 +1,9 @@
 ---
 - name: update and upgrade APT packages
-  become: true
   apt:
     upgrade: yes
     update_cache: yes
-
-- name: install Tmux
-  apt: 
-    name: tmux
   become: true
+
+- include_tasks: packages.yml
 

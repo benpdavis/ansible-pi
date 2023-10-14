@@ -1,0 +1,17 @@
+---
+- name: install Tmux
+  apt: 
+    name: tmux
+  become: true
+
+- name: ensure Cockpit is at the latest version
+  apt:
+    name: cockpit
+    state: latest
+  become: true
+
+- name: ensure Lynis is at the latest version
+  apt:
+    name: lynis
+    state: latest
+  become: true
