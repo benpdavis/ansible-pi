@@ -1,8 +1,0 @@
----
-- name: Raspberry Pi
-  hosts: pi
-  remote_user: pi
-  roles:
-    - common
-    - podman-httpd
-

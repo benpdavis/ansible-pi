@@ -1,2 +1,8 @@
 ---
-- import_playbook: includes/pi.yml
+- name: Raspberry Pi
+  hosts: pi
+  remote_user: pi
+  roles:
+    - common
+    - podman-httpd
+
