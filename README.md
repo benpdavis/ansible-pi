@@ -15,10 +15,6 @@
 
 `sudo apt install sshpass`
 
-### wsl - ubuntu - install additional ansible packages
-`ansible-galaxy collection install containers.podman`
-
-`ansible-galaxy collection install community.postgresql`
 ### wsl - ubuntu - ansible push
 `ansible-playbook site.yml -i hosts --ask-pass --ask-become-pass`
 ### wsl - ubuntu - ansible push with limit
