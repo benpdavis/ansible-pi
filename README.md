@@ -22,7 +22,7 @@
 ### wsl - ubuntu - ansible push
 `ansible-playbook site.yml -i hosts --ask-pass --ask-become-pass`
 ### wsl - ubuntu - ansible push with limit
-`ansible-playbook site.yml -i hosts --ask-pass --ask-become-pass --limit pi
+`ansible-playbook site.yml -i hosts --ask-pass --ask-become-pass --limit pi`
 ### wsl - ubuntu - ansible push with limit and extra variables
 `ansible-playbook site.yml -i hosts --ask-pass --ask-become-pass --limit pi --extra-vars='upgrade_packages=true'`
 ### wsl - ubuntu - turn off ssh key checking
