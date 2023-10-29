@@ -31,7 +31,10 @@
 `unset ANSIBLE_HOST_KEY_CHECKING`
 
 ## Miscellaneous
-`misc/pi/bootfs files in the root of the boot partition for configuring Raspberry Pi OS on initial boot:`
+`misc/pi/bootfs - files in the root of the boot partition for configuring Raspberry Pi OS on initial boot:`
+
 `ssh - enable ssh server`
+
 `userconf.txt - configure user`
+
 `wpa_supplicant.conf - configure wifi (FUNCTIONALITY REMOVED IN DEBIAN 12 BOOKWORM)`
