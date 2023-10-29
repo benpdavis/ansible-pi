@@ -8,8 +8,3 @@
   apt:
     name: cockpit
   become: true
-
-- name: install Lynis
-  apt:
-    name: lynis
-  become: true
